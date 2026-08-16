@@ -3,10 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Global Edu | 국제학교 맞춤 과외</title>
+    <title>국제학교 맞춤 과외 | IB·AP·IGCSE 코칭 | Global Edu</title>
     <meta
       name="description"
-      content="국제학교 학생을 위한 IB, AP, IGCSE 맞춤 과외. 목표 점수까지 학습 설계부터 피드백까지 끝까지 함께합니다."
+      content="국제학교 학생을 위한 IB, AP, IGCSE 맞춤 과외와 지역별 전문 상담을 제공합니다. 서울·경기·인천 등 전국 시군구별 학습 전략을 설계합니다."
+    />
+    <meta
+      name="keywords"
+      content="국제학교 과외, IB 과외, AP 과외, IGCSE 과외, 서울 과외, 경기 과외, 지역별 안내, 맞춤 과외"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,6 +33,7 @@
         <a href="#programs">프로그램</a>
         <a href="#proof">성과</a>
         <a href="#reviews">후기</a>
+        <a href="regions.html">지역별 안내</a>
         <a class="nav-cta" href="#contact">상담 신청</a>
       </nav>
     </header>
@@ -46,6 +51,7 @@
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#contact">무료 진단 상담 받기</a>
+          <a class="btn btn-ghost" href="regions.html">지역별 안내 보기</a>
           <a class="btn btn-ghost" href="tel:01029283614" aria-label="010-2928-3614로 전화 걸기">전화상담 010-2928-3614</a>
           <a class="btn btn-ghost" href="#proof">학생 성과 보기</a>
         </div>
@@ -132,7 +138,10 @@
 
       <section class="banner reveal">
         <p>한 번의 수업보다 중요한 건, 목표까지 멈추지 않는 관리입니다.</p>
-        <a class="btn btn-primary" href="#contact">지금 상담 예약하기</a>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">지금 상담 예약하기</a>
+          <a class="btn btn-ghost" href="regions.html">지역별 안내 보기</a>
+        </div>
       </section>
 
       <section id="contact" class="contact reveal">
@@ -152,6 +161,10 @@
           <label>
             학부모 연락처
             <input type="text" placeholder="예: 010-1234-5678" />
+          </label>
+          <label>
+            거주 지역 / 시군구
+            <input id="region" name="region" type="text" placeholder="예: 서울시 강남구, 수원시 영통구" />
           </label>
           <label>
             거주지(도로명주소 동호수 까지 기재)

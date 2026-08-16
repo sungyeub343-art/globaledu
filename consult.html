@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>지역별 과외 상담 신청 | Global Edu</title>
+    <meta
+      name="description"
+      content="국제학교·내신·수학·영어 과외 상담 신청. 서울, 경기, 인천, 부산, 대전, 광주 등 전국 지역별 맞춤 과외를 문의하세요."
+    />
+    <meta
+      name="keywords"
+      content="지역별 상담 신청, 과외 상담, 수학 과외, 영어 과외, 국제학교 과외, 맞춤 상담"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Serif+KR:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-a" aria-hidden="true"></div>
+    <div class="bg-orb orb-b" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">G</span>
+        <span>Global Edu</span>
+      </a>
+      <nav class="top-nav">
+        <a href="index.html#programs">프로그램</a>
+        <a href="regions.html">지역별 안내</a>
+        <a href="index.html#reviews">후기</a>
+        <a class="nav-cta" href="index.html#contact">상담 신청</a>
+      </nav>
+    </header>
+
+    <main class="page-shell consult-shell">
+      <div class="breadcrumbs" aria-label="breadcrumb">
+        <a href="index.html">홈</a>
+        <span>›</span>
+        <a href="regions.html">지역별 안내</a>
+        <span>›</span>
+        <span>상담 신청</span>
+      </div>
+
+      <section class="page-hero reveal">
+        <p class="eyebrow">Consultation</p>
+        <h1>지역별 과외 상담 신청</h1>
+        <p>
+          학생의 학교 유형, 학년, 거주 지역, 과목 목표를 알려주시면 맞는 수업 방식과
+          선생님을 추천해 드립니다. 방문 과외와 화상 과외 모두 가능합니다.
+        </p>
+      </section>
+
+      <section class="detail-layout reveal">
+        <div class="consult-card">
+          <form class="contact-form consult-form">
+            <label>
+              학생 성함
+              <input type="text" placeholder="예: 김OO" />
+            </label>
+            <label>
+              학부모 연락처
+              <input type="text" placeholder="예: 010-1234-5678" />
+            </label>
+            <label>
+              지역 선택
+              <input id="region" name="region" type="text" placeholder="예: 서울시 강남구, 수원시 영통구" />
+            </label>
+            <label>
+              학교 / 학년
+              <input type="text" placeholder="예: 국제학교 G10, 중학교 2학년" />
+            </label>
+            <label>
+              희망 과목
+              <input type="text" placeholder="예: IB Math AA HL, 고등 수학, 영어 독해" />
+            </label>
+            <label>
+              상담 내용
+              <textarea rows="5" placeholder="현재 성적, 목표 점수, 수업 형태, 고민되는 부분을 적어주세요."></textarea>
+            </label>
+            <button type="button" class="btn btn-primary">상담 신청 보내기</button>
+          </form>
+        </div>
+
+        <aside>
+          <div class="stat-box">
+            <h3>상담 절차</h3>
+            <strong>1:1</strong>
+            <p>학생 상태 확인 후 맞춤형 과외 계획을 제안합니다.</p>
+          </div>
+          <div class="stat-box">
+            <h3>모집 방식</h3>
+            <strong>방문/화상</strong>
+            <p>지역과 상황에 맞춰 과외 방식을 조율합니다.</p>
+          </div>
+          <div class="stat-box">
+            <h3>신속 대응</h3>
+            <strong>24시간</strong>
+            <p>상담 후 빠른 일정 안내와 추천 계획을 전달합니다.</p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Global Edu | 지역별 상담 신청</p>
+      <p>Copyright © 2026 globaledu.kr All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
