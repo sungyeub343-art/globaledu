@@ -54,10 +54,10 @@ if (districtDirectory) {
 const districtTitle = document.getElementById('district-title');
 if (districtTitle && selectedRegion && selectedDistrict) {
   const fullName = `${selectedRegion} ${selectedDistrict}`;
-  document.title = `${fullName} 과외 안내 | Global Edu`;
+  document.title = `${fullName} 국제학교 과외 안내 | Global Edu`;
   document.querySelector('meta[name="description"]')?.setAttribute('content', `${fullName} 국제학교 학생을 위한 IB·AP·IGCSE 수학과 Academic English 맞춤 과외 안내입니다. 방문·화상 수업과 무료 상담을 제공합니다.`);
   document.getElementById('district-region').textContent = selectedRegion;
-  document.getElementById('district-title').textContent = `${fullName} 과외 안내`;
+  document.getElementById('district-title').textContent = `${fullName} 국제학교 과외 안내`;
   document.getElementById('district-intro').textContent = `${fullName} 국제학교 학생의 커리큘럼과 학교 일정을 확인해 수학·영어 과외, 과제 관리, 시험 대비를 맞춤으로 설계합니다.`;
   document.getElementById('breadcrumb-district').textContent = selectedDistrict;
   document.getElementById('plan-title').textContent = `${selectedDistrict} 맞춤 국제학교 학습 플랜`;
