@@ -44,7 +44,7 @@ if (districtDirectory) {
       const link = document.createElement('a');
       link.className = 'district-link';
       link.href = `district.html?region=${encodeURIComponent(region)}&district=${encodeURIComponent(district)}`;
-      link.innerHTML = `<strong>${district}</strong><span>상세 안내 <span aria-hidden="true">→</span></span>`;
+      link.innerHTML = `<strong>${district}</strong><span aria-hidden="true">↗</span>`;
       links.appendChild(link);
     });
     districtDirectory.appendChild(group);
