@@ -244,6 +244,19 @@ section {
   box-shadow: var(--shadow);
 }
 
+.review-grid blockquote {
+  overflow: hidden;
+}
+
+.review-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  margin: -1.2rem -1.2rem 1rem;
+  width: calc(100% + 2.4rem);
+  object-fit: cover;
+}
+
 .region-card {
   display: grid;
   gap: 0.5rem;
