@@ -57,32 +57,35 @@
 
       <section class="detail-layout reveal">
         <div class="consult-card">
-          <form class="contact-form consult-form">
+          <form class="contact-form consult-form" action="https://formsubmit.co/sungyeub343@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Global Edu 지역 상담 문의" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="form-honeypot" />
             <label>
               학생 성함
-              <input type="text" placeholder="예: 김OO" />
+              <input type="text" name="학생 성함" placeholder="예: 김OO" required />
             </label>
             <label>
               학부모 연락처
-              <input type="text" placeholder="예: 010-1234-5678" />
+              <input type="tel" name="학부모 연락처" placeholder="예: 010-1234-5678" required />
             </label>
             <label>
               지역 선택
-              <input id="region" name="region" type="text" placeholder="예: 서울시 강남구, 수원시 영통구" />
+              <input id="region" name="거주 지역" type="text" placeholder="예: 서울시 강남구, 수원시 영통구" required />
             </label>
             <label>
               학교 / 학년
-              <input type="text" placeholder="예: 국제학교 G10, 중학교 2학년" />
+              <input type="text" name="학교 / 학년" placeholder="예: 국제학교 G10, 중학교 2학년" required />
             </label>
             <label>
               희망 과목
-              <input type="text" placeholder="예: IB Math AA HL, 고등 수학, 영어 독해" />
+              <input type="text" name="희망 과목" placeholder="예: IB Math AA HL, 고등 수학, 영어 독해" required />
             </label>
             <label>
               상담 내용
-              <textarea rows="5" placeholder="현재 성적, 목표 점수, 수업 형태, 고민되는 부분을 적어주세요."></textarea>
+              <textarea name="상담 내용" rows="5" placeholder="현재 성적, 목표 점수, 수업 형태, 고민되는 부분을 적어주세요." required></textarea>
             </label>
-            <button type="button" class="btn btn-primary">상담 신청 보내기</button>
+            <button type="submit" class="btn btn-primary">상담 신청 보내기</button>
           </form>
         </div>
 

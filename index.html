@@ -156,32 +156,35 @@
             순차적으로 상담 연락을 드리겠습니다.
           </p>
         </div>
-        <form class="contact-form">
+        <form class="contact-form" action="https://formsubmit.co/sungyeub343@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="Global Edu 새 상담 문의" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="form-honeypot" />
           <label>
             학생 성함
-            <input type="text" placeholder="예: 김OO" />
+            <input type="text" name="학생 성함" placeholder="예: 김OO" required />
           </label>
           <label>
             학부모 연락처
-            <input type="text" placeholder="예: 010-1234-5678" />
+            <input type="tel" name="학부모 연락처" placeholder="예: 010-1234-5678" required />
           </label>
           <label>
             거주 지역 / 시군구
-            <input id="region" name="region" type="text" placeholder="예: 서울시 강남구, 수원시 영통구" />
+            <input id="region" name="거주 지역 / 시군구" type="text" placeholder="예: 서울시 강남구, 수원시 영통구" required />
           </label>
           <label>
             거주지(도로명주소 동호수 까지 기재)
-            <input type="text" placeholder="예: 서울시 강남구 OO로 00, 101동 1001호" />
+            <input type="text" name="거주지" placeholder="예: 서울시 강남구 OO로 00, 101동 1001호" required />
           </label>
           <label>
             희망 과목
-            <input type="text" placeholder="예: IB Math AA HL" />
+            <input type="text" name="희망 과목" placeholder="예: IB Math AA HL" required />
           </label>
           <label>
             문의 내용
-            <textarea rows="4" placeholder="현재 성적, 목표 점수, 희망 수업 방식 등을 작성해 주세요."></textarea>
+            <textarea name="문의 내용" rows="4" placeholder="현재 성적, 목표 점수, 희망 수업 방식 등을 작성해 주세요." required></textarea>
           </label>
-          <button type="button" class="btn btn-primary">상담 요청 보내기</button>
+          <button type="submit" class="btn btn-primary">상담 요청 보내기</button>
         </form>
       </section>
     </main>
