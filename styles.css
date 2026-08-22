@@ -585,6 +585,42 @@ section {
   gap: 0.55rem;
 }
 
+.locality-directory[hidden] {
+  display: none;
+}
+
+.locality-links {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.locality-link {
+  min-height: 46px;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid rgba(15, 138, 117, 0.16);
+  border-radius: 10px;
+  background: rgba(255, 253, 248, 0.8);
+  box-shadow: 0 8px 18px rgba(15, 95, 82, 0.08);
+  color: var(--brand-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.locality-link:hover,
+.locality-link[aria-current="page"] {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, var(--brand), var(--brand-deep));
+  box-shadow: 0 12px 20px rgba(15, 138, 117, 0.22);
+  color: #fff;
+}
+
 .district-link {
   min-height: 32px;
   padding: 0.38rem 0.65rem;
@@ -643,6 +679,10 @@ section {
     display: none;
   }
 
+  .locality-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .metrics {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -667,6 +707,10 @@ section {
 
   .hero h1 {
     font-size: 2rem;
+  }
+
+  .locality-links {
+    grid-template-columns: 1fr;
   }
 
   .metrics {
