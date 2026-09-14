@@ -481,6 +481,19 @@ section {
   align-items: start;
 }
 
+.district-guide {
+  overflow: hidden;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.district-guide img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .info-card h3,
 .stat-box h3,
 .faq-item h3 {
