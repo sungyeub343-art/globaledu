@@ -2,6 +2,8 @@ const urlParams = new URLSearchParams(window.location.search);
 const selectedRegion = urlParams.get('region');
 const selectedDistrict = urlParams.get('district');
 const selectedLocality = urlParams.get('locality');
+const isMathGuide = document.body.dataset.guide === 'math';
+const districtPagePath = isMathGuide ? 'math-district.html' : 'district.html';
 const regionField = document.getElementById('region');
 
 if (regionField) {
@@ -180,7 +182,7 @@ if (districtDirectory) {
     districts.forEach((district) => {
       const link = document.createElement('a');
       link.className = 'district-link';
-      link.href = `district.html?region=${encodeURIComponent(region)}&district=${encodeURIComponent(district)}`;
+      link.href = `${districtPagePath}?region=${encodeURIComponent(region)}&district=${encodeURIComponent(district)}`;
       link.innerHTML = `<strong>${district}</strong><span aria-hidden="true">↗</span>`;
       links.appendChild(link);
     });
@@ -193,14 +195,20 @@ if (districtTitle && selectedRegion && selectedDistrict) {
   const localityNames = localityData[selectedRegion]?.[selectedDistrict];
   const isKnownLocality = localityNames?.includes(selectedLocality);
   const fullName = [selectedRegion, selectedDistrict, isKnownLocality ? selectedLocality : null].filter(Boolean).join(' ');
-  document.title = `${fullName} 국제학교 SAT 영어과외 안내 | Global Edu`;
-  document.querySelector('meta[name="description"]')?.setAttribute('content', `${fullName} 국제학교 학생을 위한 SAT 영어과외와 IB·AP·IGCSE·A-Level, TOEFL·IELTS 대비 안내입니다. 방문·화상 1:1 수업과 무료 상담을 제공합니다.`);
+  const guideTitle = isMathGuide ? '국제학교 수학과외 알지브라 지오메트리 안내' : '국제학교 SAT 영어과외 안내';
+  const description = isMathGuide
+    ? `${fullName} 국제학교 학생을 위한 수학과외 안내입니다. Algebra·Geometry 개념, 학교 내신, 시험 대비를 방문·화상 1:1 수업으로 지도합니다.`
+    : `${fullName} 국제학교 학생을 위한 SAT 영어과외와 IB·AP·IGCSE·A-Level, TOEFL·IELTS 대비 안내입니다. 방문·화상 1:1 수업과 무료 상담을 제공합니다.`;
+  document.title = `${fullName} ${guideTitle} | Global Edu`;
+  document.querySelector('meta[name="description"]')?.setAttribute('content', description);
   document.getElementById('district-region').textContent = selectedRegion;
-  document.getElementById('district-title').textContent = `${fullName} 국제학교 SAT 영어과외 안내`;
-  document.getElementById('district-intro').textContent = `${fullName} 국제학교 학생의 커리큘럼과 학교 일정을 확인해 수학·영어 과외, 내신 관리, 과제 코칭, 시험 대비를 맞춤으로 설계합니다.`;
+  document.getElementById('district-title').textContent = `${fullName} ${guideTitle}`;
+  document.getElementById('district-intro').textContent = isMathGuide
+    ? `${fullName} 국제학교 학생의 수학 과정과 현재 수준을 확인해 Algebra·Geometry 개념 학습, 내신 관리, 과제 코칭과 시험 대비를 맞춤으로 설계합니다.`
+    : `${fullName} 국제학교 학생의 커리큘럼과 학교 일정을 확인해 수학·영어 과외, 내신 관리, 과제 코칭, 시험 대비를 맞춤으로 설계합니다.`;
   document.getElementById('breadcrumb-district').textContent = isKnownLocality ? `${selectedDistrict} ${selectedLocality}` : selectedDistrict;
-  document.getElementById('plan-title').textContent = `${isKnownLocality ? selectedLocality : selectedDistrict} 맞춤 국제학교 학습 플랜`;
-  document.getElementById('stat-copy').textContent = `${isKnownLocality ? selectedLocality : selectedDistrict} 학생의 커리큘럼, 학년, 목표에 맞춘 1:1 상담을 진행합니다.`;
+  document.getElementById('plan-title').textContent = `${isKnownLocality ? selectedLocality : selectedDistrict} 맞춤 국제학교 ${isMathGuide ? '수학 학습' : '학습'} 플랜`;
+  document.getElementById('stat-copy').textContent = `${isKnownLocality ? selectedLocality : selectedDistrict} 학생의 ${isMathGuide ? '수학 과정' : '커리큘럼'}, 학년, 목표에 맞춘 1:1 상담을 진행합니다.`;
   document.querySelectorAll('#consult-link, #district-consult, #bottom-consult').forEach((link) => {
     const consultParams = new URLSearchParams({ region: selectedRegion, district: selectedDistrict });
     if (isKnownLocality) consultParams.set('locality', selectedLocality);
@@ -213,13 +221,13 @@ if (districtTitle && selectedRegion && selectedDistrict) {
     localityDirectory.hidden = false;
     document.getElementById('locality-eyebrow').textContent = `${selectedDistrict} neighborhood guidance`;
     document.getElementById('locality-title').textContent = `${selectedDistrict} 동·읍·면 지역 선택`;
-    document.getElementById('locality-lead').textContent = `거주 또는 수업 희망 동·읍·면을 선택하면 ${selectedDistrict} 해당 지역의 국제학교 과외 상담 페이지로 이동합니다.`;
+    document.getElementById('locality-lead').textContent = `거주 또는 수업 희망 동·읍·면을 선택하면 ${selectedDistrict} 해당 지역의 국제학교 ${isMathGuide ? '수학과외' : '과외'} 안내 페이지로 이동합니다.`;
 
     localityNames.forEach((locality) => {
       const link = document.createElement('a');
       const localityParams = new URLSearchParams({ region: selectedRegion, district: selectedDistrict, locality });
       link.className = 'locality-link';
-      link.href = `district.html?${localityParams.toString()}`;
+      link.href = `${districtPagePath}?${localityParams.toString()}`;
       link.textContent = locality;
       if (locality === selectedLocality) link.setAttribute('aria-current', 'page');
       localityLinks.appendChild(link);
