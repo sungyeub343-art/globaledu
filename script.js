@@ -199,7 +199,7 @@ if (districtTitle && selectedRegion && selectedDistrict) {
   const description = isMathGuide
     ? `${fullName} 국제학교 학생을 위한 수학과외 안내입니다. Algebra·Geometry 개념, 학교 내신, 시험 대비를 방문·화상 1:1 수업으로 지도합니다.`
     : `${fullName} 국제학교 학생을 위한 SAT 영어과외와 IB·AP·IGCSE·A-Level, TOEFL·IELTS 대비 안내입니다. 방문·화상 1:1 수업과 무료 상담을 제공합니다.`;
-  document.title = `${fullName} ${guideTitle} | Global Edu상상코칭`;
+  document.title = `${fullName} ${guideTitle} | 국제학교과외`;
   document.querySelector('meta[name="description"]')?.setAttribute('content', description);
   document.getElementById('district-region').textContent = selectedRegion;
   document.getElementById('district-title').textContent = `${fullName} ${guideTitle}`;
