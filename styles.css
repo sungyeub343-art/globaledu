@@ -501,6 +501,16 @@ section {
   gap: 0.65rem;
 }
 
+a.city-card {
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+a.city-card:hover,
+a.city-card:focus-visible {
+  transform: translateY(-3px);
+  border-color: rgba(15, 138, 117, 0.4);
+}
+
 .city-card strong {
   font-size: 1.2rem;
 }
