@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://globaledu.kr/</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>https://globaledu.kr/</loc><lastmod>2026-10-28</lastmod></url>
   <url><loc>https://globaledu.kr/igcse-tutoring.html</loc><lastmod>2026-09-30</lastmod></url>
   <url><loc>https://globaledu.kr/ib-tutoring.html</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://globaledu.kr/ap-tutoring.html</loc><lastmod>2026-10-02</lastmod></url>
@@ -24,7 +24,7 @@
   <url><loc>https://globaledu.kr/gyeongsangbukdo.html</loc><lastmod>2026-09-28</lastmod></url>
   <url><loc>https://globaledu.kr/gyeongsangnamdo.html</loc><lastmod>2026-09-28</lastmod></url>
   <url><loc>https://globaledu.kr/jeju.html</loc><lastmod>2026-09-28</lastmod></url>
-  <url><loc>https://globaledu.kr/overseas.html</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>https://globaledu.kr/overseas.html</loc><lastmod>2026-10-28</lastmod></url>
   <url><loc>https://globaledu.kr/us-irvine.html</loc><lastmod>2026-10-19</lastmod></url>
   <url><loc>https://globaledu.kr/us-la-fullerton-torrance.html</loc><lastmod>2026-10-19</lastmod></url>
   <url><loc>https://globaledu.kr/us-silicon-valley.html</loc><lastmod>2026-10-19</lastmod></url>
@@ -44,4 +44,12 @@
   <url><loc>https://globaledu.kr/thailand.html</loc><lastmod>2026-10-27</lastmod></url>
   <url><loc>https://globaledu.kr/philippines.html</loc><lastmod>2026-10-27</lastmod></url>
   <url><loc>https://globaledu.kr/indonesia.html</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>https://globaledu.kr/us-nyc.html</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://globaledu.kr/us-boston.html</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://globaledu.kr/us-houston.html</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://globaledu.kr/us-central-nj.html</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://globaledu.kr/shanghai.html</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://globaledu.kr/beijing.html</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://globaledu.kr/hong-kong.html</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://globaledu.kr/tokyo.html</loc><lastmod>2026-10-28</lastmod></url>
 </urlset>
