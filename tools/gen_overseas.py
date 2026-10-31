@@ -1,6 +1,6 @@
 """Generate overseas region pages (2nd batch) and register them in the hub, homepage and sitemap.
 
-Usage: python tools/gen_overseas.py
+Usage: python tools/gen_overseas.py  (then run tools/add_footer_links.py to restore footer links)
 Page markup matches the first batch (us-irvine.html etc.). Re-running overwrites the page files;
 hub/index/sitemap edits are skipped when the slug is already registered.
 """

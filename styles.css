@@ -625,6 +625,32 @@ a.city-card:focus-visible {
   font-size: 0.9rem;
 }
 
+.footer-links {
+  display: grid;
+  gap: 0.7rem;
+  max-width: 1100px;
+  margin: 0 auto 1.4rem;
+  text-align: left;
+  font-size: 0.82rem;
+}
+
+.footer-links div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.8rem;
+  align-items: baseline;
+}
+
+.footer-links strong {
+  min-width: 6.5rem;
+  color: var(--brand-deep);
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  text-decoration: underline;
+}
+
 .section-lead {
   max-width: 680px;
   margin-top: 0.5rem;
